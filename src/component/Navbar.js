@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <div className='w-full h-10 bg-slate-100 '>
         <ul className='flex '>
-        <li className='m-1 cursor-pointer'>
+        {/* <li className='m-1 cursor-pointer'>
           <Link to="/">Home</Link>
-        </li>
+        </li> */}
         {/* <li className='m-1 cursor-pointer'><Link to="/">  Home</Link></li> */}
          
             {/* <Link to="/about"><li className='m-1 cursor-pointer'>About</li></Link>  
