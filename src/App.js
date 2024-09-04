@@ -7,17 +7,28 @@ import Navbar from './component/Navbar';
 import MainContainer from './component/MainContainer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Body from './component/Body';
+import  Form  from './component/Form';
+import LoginForm from './component/Loginform';
 
 
 function App() {
 
-  const systemrouter = createBrowserRouter([{
+  const systemrouter = createBrowserRouter([
+    {
+      path:'/login',
+      element:<LoginForm/>
+    },
+    {
     path:'/',
     element: <Body/>,
     children:[
       {
-        path:'/',
+        index: true, 
         element:<MainContainer/>
+      },
+      {
+        path: '/adduser', 
+        element:   <Form/>
       },
       {
       path:'/about',
@@ -33,8 +44,9 @@ function App() {
   return (
     <div className="">
        <Header/>
-       <Navbar/>
-       <RouterProvider router={systemrouter}/>
+       
+       <RouterProvider router={systemrouter}>
+       </RouterProvider>
        <Footer/>
 
     
